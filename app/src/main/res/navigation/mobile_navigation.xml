@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.d.mydrawerapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_subHomeFragment"
+            app:destination="@id/subHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.d.mydrawerapp.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.d.mydrawerapp.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.d.mydrawerapp.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.d.mydrawerapp.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.d.mydrawerapp.ui.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+    <fragment
+        android:id="@+id/subHomeFragment"
+        android:name="com.d.mydrawerapp.ui.home.SubHomeFragment"
+        android:label="Sub Home"
+        tools:layout="@layout/sub_home_fragment">
+        <action
+            android:id="@+id/action_subHomeFragment_to_subSubHomeFragment"
+            app:destination="@id/subSubHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subSubHomeFragment"
+        android:name="com.d.mydrawerapp.ui.home.SubSubHomeFragment"
+        android:label="Sub Sub Home"
+        tools:layout="@layout/sub_sub_home_fragment" />
+</navigation>
