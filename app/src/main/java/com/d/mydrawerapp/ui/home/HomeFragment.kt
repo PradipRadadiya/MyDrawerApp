@@ -34,6 +34,7 @@ class HomeFragment : Fragment() {
         homeViewModel.btn.observe(this, Observer {
             btn.text = it
         })
+
         btn.setOnClickListener {
             it.findNavController().navigate(R.id.subHomeFragment)
         }

@@ -3,16 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.d.mydrawerapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
+
         <action
             android:id="@+id/action_nav_home_to_subHomeFragment"
             app:destination="@id/subHomeFragment" />
+
     </fragment>
 
     <fragment
@@ -44,6 +46,7 @@
         android:name="com.d.mydrawerapp.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+
     <fragment
         android:id="@+id/subHomeFragment"
         android:name="com.d.mydrawerapp.ui.home.SubHomeFragment"
@@ -53,6 +56,7 @@
             android:id="@+id/action_subHomeFragment_to_subSubHomeFragment"
             app:destination="@id/subSubHomeFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/subSubHomeFragment"
         android:name="com.d.mydrawerapp.ui.home.SubSubHomeFragment"
